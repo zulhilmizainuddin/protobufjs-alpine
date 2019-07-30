@@ -7,4 +7,6 @@ before_install:
 
 script:
   - docker run --rm -v $(pwd)/proto:/var/proto zulhilmizainuddin/protobufjs-docker -t static-module -o addressbook.js addressbook.proto
-  - test -f $(pwd)/proto/adressbook.js
+  - ls -la
+  - ls -la proto
+  # - test -f $(pwd)/proto/adressbook.js
