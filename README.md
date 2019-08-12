@@ -19,5 +19,10 @@ $ docker build -t zulhilmizainuddin/protobufjs .
 ## Compile proto file to JavaScript
 
 ```
-$ docker run --rm -v $(pwd)/proto:/usr/src/proto zulhilmizainuddin/protobufjs -t static-module -w commonjs -o addressbook.js addressbook.proto
+$ docker run --rm -v $(pwd)/proto:/usr/src/proto zulhilmizainuddin/protobufjs pbjs -t static-module -w commonjs -o addressbook.js addressbook.proto
+```
+
+## Compile JavaScript to type definition file
+```
+$ docker run --rm -v $(pwd)/proto:/usr/src/proto zulhilmizainuddin/protobufjs pbts -o addressbook.d.ts addressbook.js
 ```
